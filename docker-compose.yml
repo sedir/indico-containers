@@ -1,13 +1,13 @@
 version: "2"
 services:
   indico-web: &indico-web
-    image: getindico/indico:latest
+    image: getindico/indico:3.0
     command: /opt/indico/run_indico.sh
     depends_on:
       - indico-redis
       - indico-celery
-    ports:
-      - "9090:59999"  # tcp socket port
+        #ports:
+        # - "9090:59999"  # tcp socket port
     networks:
       - backend
       - frontend
@@ -56,7 +56,7 @@ services:
     env_file:
       - indico.env
     ports:
-      - "8080:8080"
+      - "8921:9090"
     volumes_from:
       - indico-web
 volumes:
