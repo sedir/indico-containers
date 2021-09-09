@@ -1,7 +1,7 @@
 version: "2"
 services:
   indico-web: &indico-web
-    build: indico/app
+    image: getindico/indico:3.0
     command: /opt/indico/run_indico.sh
     depends_on:
       - indico-redis
