@@ -1,0 +1,14 @@
+84,85c84,85
+<     app.config['PREFERRED_URL_SCHEME'] = base.scheme
+<     app.config['SERVER_NAME'] = base.netloc
+---
+>     #app.config['PREFERRED_URL_SCHEME'] = base.scheme
+>     #app.config['SERVER_NAME'] = base.netloc
+351,353c351,353
+<     if config.BASE_URL != url_root:
+<         Logger.get('flask').info('Received request with invalid url root for %s', request.url)
+<         return render_template('bad_url_error.html'), 404
+---
+>     #if config.BASE_URL != url_root:
+>     #    Logger.get('flask').info('Received request with invalid url root for %s', request.url)
+>     #    return render_template('bad_url_error.html'), 404
